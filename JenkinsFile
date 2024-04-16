@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Identificar Día de la Semana') {
+            steps {
+                script {
+                    def today = new Date()
+                    def dayOfWeek = today.format('EEEE')
+                    echo "Hoy es ${dayOfWeek}."
+                }
+            }
+        }
+    }
+}
