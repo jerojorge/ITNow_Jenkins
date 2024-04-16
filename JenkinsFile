@@ -2,6 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('Listar Días de la Semana') {
+            steps {
+                script {
+                    def diasSemana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+                    echo "Días de la semana ${diasSemana}."
+                }
+            }
+        }
         stage('Identificar Día de la Semana') {
             steps {
                 script {
